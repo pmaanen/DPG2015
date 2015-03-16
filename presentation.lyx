@@ -4,12 +4,33 @@
 \begin_header
 \textclass beamer
 \begin_preamble
-\usepackage{braket}
 \usetheme{rwth}
+\usepackage{braket}
+
+\title{Polarimetry concepts for the EDM precursor experiment at COSY}
+\author{Paul Maanen}
+\institute{Physics Institute III B, RWTH Aachen University}
+\date[\today]{DPG Frühjahrstagung \today}
+
+% Some changes on the layout, can be switched off by commenting out
+\setheadlinestyle{headlineframetitle}
+\setfooterstyle{footertitleauthor}
+\setfootlinestyle{footlinedatepages}
+
+% German style date formatting (footer)
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+% To get greek letters better matching with rest of font
 \usepackage{upgreek}
+
+\logo{\includegraphics{gfx/rwth_3physik_b_englisch_rgb.png}}
 \end_preamble
 \options t
 \use_default_options true
+\begin_modules
+fixltx2e
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -51,7 +72,7 @@
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 1
 \index Index
@@ -71,45 +92,63 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 1660946855 "Paul Maanen" 
 \end_header
 
 \begin_body
 
-\begin_layout Title
-Polarimetry concepts for the EDM precursor experiment at COSY
-\end_layout
-
-\begin_layout Author
-Paul Maanen
-\end_layout
-
-\begin_layout Institute
-Physics Institute III B, RWTH Aachen University
-\end_layout
-
-\begin_layout Date
-DPG Frühjahrstagung 
-\change_inserted 1660946855 1426160222
-
+\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1660946855 1426160227
+
+\backslash
+setbeamercolor{title page bar}{fg=rwth} 
+\end_layout
+
+\begin_layout Plain Layout
 
 
 \backslash
-today
-\change_unchanged
+setbeamertemplate{title page}[rwth]{} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+titlepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
 
 \end_layout
 
@@ -137,6 +176,10 @@ LatexCommand tableofcontents
 \end_layout
 
 \end_deeper
+\begin_layout Separator
+
+\end_layout
+
 \begin_layout Section
 Motivation
 \end_layout
@@ -146,7 +189,7 @@ Motivation
 status open
 
 \begin_layout Plain Layout
-Motivation
+Design goals for an EDM polarimeter
 \end_layout
 
 \end_inset
@@ -156,12 +199,12 @@ Motivation
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Polarization buildup due to EDM is tiny
-\end_layout
+Current candidate method for EDM search implicates a linear buildup of polarizat
+ion with time where 
+\begin_inset Formula 
+\[
+\frac{dP}{dt}\approx10^{-6}/1000s
+\]
 
 \end_inset
 
@@ -169,13 +212,31 @@ Polarization buildup due to EDM is tiny
 \end_layout
 
 \begin_layout Itemize
-The polarization buildup for an EDM signal is 
-\begin_inset Formula $\mathcal{O}(10^{-6})$
+Design goals for polarimeter:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+High 
+\begin_inset Formula $\sigma_{el}$
+\end_inset
+
+,
+\begin_inset Formula $A_{y}$
 \end_inset
 
 
 \end_layout
 
+\begin_layout Itemize
+Minimal influence on beam
+\end_layout
+
+\begin_layout Itemize
+Low sensitivity to systematic effects
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Frame
 
@@ -186,7 +247,7 @@ The polarization buildup for an EDM signal is
 \end_layout
 
 \begin_layout Section
-Polarimetry concept
+Detector concept
 \end_layout
 
 \begin_layout Frame
@@ -204,7 +265,7 @@ Target choice
 
 \begin_deeper
 \begin_layout Itemize
-Deuteron-Carbon scattering was chosen 
+Carbon was chosen as best overall target choice
 \end_layout
 
 \begin_layout Itemize
@@ -212,15 +273,8 @@ Deuteron-Carbon scattering was chosen
 status open
 
 \begin_layout Plain Layout
-Hier wirkungsquerschnitt und analysierstärke zeigen 
-\begin_inset Quotes eld
-\end_inset
-
-best overall
-\begin_inset Quotes erd
-\end_inset
-
-
+dC el.
+ xsec, Ay
 \end_layout
 
 \end_inset
@@ -229,6 +283,10 @@ best overall
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
@@ -238,7 +296,7 @@ best overall
 status open
 
 \begin_layout Plain Layout
-Polarimeter concept
+Target concept
 \end_layout
 
 \end_inset
@@ -246,14 +304,20 @@ Polarimeter concept
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-k
-\begin_inset Note Note
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
-\begin_layout Itemize
-Hier Iraklis bild zeigen
+\begin_layout Plain Layout
+Detector concept
 \end_layout
 
 \end_inset
@@ -261,7 +325,6 @@ Hier Iraklis bild zeigen
 
 \end_layout
 
-\end_deeper
 \begin_layout Separator
 
 \end_layout
@@ -311,7 +374,31 @@ SIS Waveform Digitizer zeigen.
 
 \end_deeper
 \begin_layout Section
-Simulation studies
+Detector
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Candidate Layout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Bild hier.
+ 5-20° 3x3x10 cm LYSO
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
 \end_layout
 
 \begin_layout Frame
@@ -367,22 +454,12 @@ Simulation studies (cont'd)
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Third Point
-\end_layout
-
-\begin_layout Itemize
-Fourth Point
-\end_layout
-
-\end_deeper
 \begin_layout Frame
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Lyso vs Plastic+Degrader vs 
+Lyso vs Plastic+Degrader vs Sandwich
 \end_layout
 
 \end_inset
@@ -408,6 +485,10 @@ Summary & Outlook
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+Have a candidate layout for JEDI polarimeter
+\end_layout
+
 \begin_layout Itemize
 Crystals have been ordered for hardware tests.
 \end_layout
