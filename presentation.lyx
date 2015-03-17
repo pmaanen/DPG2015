@@ -8,6 +8,7 @@
 \usepackage{braket}
 
 \title{Polarimetry concepts for the EDM precursor experiment at COSY}
+\subtitle{\vspace{2cm} \hspace{15cm} \includegraphics{gfx/jedi_logo2.png} \vspace{-2cm}}
 \author{Paul Maanen}
 \institute{Physics Institute III B, RWTH Aachen University}
 \date[\today]{DPG Frühjahrstagung \today}
@@ -200,15 +201,7 @@ Design goals for an EDM polarimeter
 \begin_deeper
 \begin_layout Itemize
 Current candidate method for EDM search implicates a linear buildup of polarizat
-ion with time where 
-\begin_inset Formula 
-\[
-\frac{dP}{dt}\approx10^{-6}/1000s
-\]
-
-\end_inset
-
-
+ion with time.
 \end_layout
 
 \begin_layout Itemize
@@ -269,11 +262,15 @@ Carbon was chosen as best overall target choice
 \end_layout
 
 \begin_layout Itemize
+Big cross section and analysing power, easy to handle
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-dC el.
+bild dC el.
  xsec, Ay
 \end_layout
 
@@ -304,6 +301,23 @@ Target concept
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename gfx/target.png
+	lyxscale 20
+	height 100theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Frame
 
 \end_layout
@@ -325,6 +339,19 @@ Detector concept
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename gfx/detector.png
+	lyxscale 20
+	height 100theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Separator
 
 \end_layout
@@ -342,6 +369,17 @@ Readout Concept
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Graphics
+	filename gfx/readout.png
+	lyxscale 20
+	height 100theight%
+
+\end_inset
+
+
+\end_layout
+
 \begin_deeper
 \begin_layout Itemize
 \begin_inset Quotes eld
@@ -351,7 +389,7 @@ Triggerless
 \begin_inset Quotes erd
 \end_inset
 
- Readout: Use waveform digitizers and Read out every turn.
+ Readout: Use waveform digitizers and read out every turn.
 \begin_inset Note Note
 status collapsed
 
@@ -369,6 +407,33 @@ SIS Waveform Digitizer zeigen.
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Itemize
+Use FPGA-based online analysis
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Readout Concept (cont'd)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 
 \end_layout
 
