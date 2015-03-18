@@ -266,6 +266,7 @@ Big cross section and analysing power, easy to handle
 \end_layout
 
 \begin_layout Itemize
+XSec, Ay, FOM 50, 250 MeV
 \begin_inset Note Note
 status open
 
@@ -369,27 +370,20 @@ Readout Concept
 
 \end_layout
 
-\begin_layout Frame
+\begin_deeper
+\begin_layout Standard
 \begin_inset Graphics
 	filename gfx/readout.png
 	lyxscale 20
-	height 100theight%
+	height 80theight%
 
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-\begin_inset Quotes eld
-\end_inset
-
-Triggerless
-\begin_inset Quotes erd
-\end_inset
-
- Readout: Use waveform digitizers and read out every turn.
+Triggerless readout: Use waveform digitizers and read out every turn.
 \begin_inset Note Note
 status collapsed
 
@@ -434,10 +428,21 @@ Readout Concept (cont'd)
 
 \begin_deeper
 \begin_layout Standard
+\begin_inset Graphics
+	filename gfx/sis.png
+	lyxscale 10
+	height 100theight%
+
+\end_inset
+
 
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Section
 Detector
 \end_layout
@@ -455,13 +460,6 @@ Candidate Layout
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Bild hier.
- 5-20° 3x3x10 cm LYSO
-\end_layout
-
-\end_deeper
 \begin_layout Separator
 
 \end_layout
@@ -480,12 +478,14 @@ Simulation studies
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-First Point
-\end_layout
+\begin_layout Standard
+\begin_inset Graphics
+	filename gfx/LYSO.eps
+	width 75page%
 
-\begin_layout Itemize
-Second Point
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -519,6 +519,12 @@ Simulation studies (cont'd)
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Lyso vs Plastic+Degrader vs Sandwich
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 \begin_inset Note Note
 status open
