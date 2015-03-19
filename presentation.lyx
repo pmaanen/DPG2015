@@ -201,7 +201,15 @@ Design goals for an EDM polarimeter
 \begin_deeper
 \begin_layout Itemize
 Current candidate method for EDM search implicates a linear buildup of polarizat
-ion with time.
+ion with time at 
+\begin_inset Formula $\mathcal{O}(10^{-9}/s)$
+\end_inset
+
+
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -219,14 +227,26 @@ High
 \end_inset
 
 
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 Minimal influence on beam
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 Low sensitivity to systematic effects
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -256,28 +276,28 @@ Target choice
 
 \end_layout
 
+\begin_layout Frame
+
+\end_layout
+
 \begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/FOM_270_200_49_MeV.pdf
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 Carbon was chosen as best overall target choice
 \end_layout
 
 \begin_layout Itemize
 Big cross section and analysing power, easy to handle
-\end_layout
-
-\begin_layout Itemize
-XSec, Ay, FOM 50, 250 MeV
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-bild dC el.
- xsec, Ay
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -343,7 +363,7 @@ Detector concept
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
-	filename gfx/detector.png
+	filename gfx/DetectorSketch.pdf
 	lyxscale 20
 	height 100theight%
 
@@ -373,7 +393,7 @@ Readout Concept
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
-	filename gfx/readout.png
+	filename gfx/DAQ.pdf
 	lyxscale 20
 	height 80theight%
 
@@ -413,36 +433,6 @@ Use FPGA-based online analysis
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Readout Concept (cont'd)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Graphics
-	filename gfx/sis.png
-	lyxscale 10
-	height 100theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Section
 Detector
 \end_layout
@@ -460,6 +450,18 @@ Candidate Layout
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename gfx/FullDetectors.pdf
+	height 100theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Separator
 
 \end_layout
@@ -477,11 +479,15 @@ Simulation studies
 
 \end_layout
 
+\begin_layout Frame
+
+\end_layout
+
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
-	filename gfx/LYSO.eps
-	width 75page%
+	filename gfx/Simulation.pdf
+	height 100theight%
 
 \end_inset
 
@@ -489,19 +495,6 @@ Simulation studies
 \end_layout
 
 \end_deeper
-\begin_layout Frame
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Proton and Deuteron lateral and longitudinal range
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Separator
 
 \end_layout
@@ -520,17 +513,42 @@ Simulation studies (cont'd)
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Lyso vs Plastic+Degrader vs Sandwich
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/ranges.eps
+	width 40text%
+	height 80theight%
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename gfx/Stop_in_LYSO.pdf
+	width 40text%
+	height 80theight%
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Separator
+
+\end_layout
+
 \begin_layout Frame
-\begin_inset Note Note
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Lyso vs Plastic+Degrader vs Sandwich
+Simulation studies (cont'd)
 \end_layout
 
 \end_inset
@@ -538,6 +556,33 @@ Lyso vs Plastic+Degrader vs Sandwich
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/dC_elastic_EvsTheta.pdf
+	width 40page%
+	height 80theight%
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename gfx/Inelastic.pdf
+	width 40page%
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Summary & Outlook
 \end_layout
@@ -557,19 +602,47 @@ Summary & Outlook
 
 \begin_deeper
 \begin_layout Itemize
-Have a candidate layout for JEDI polarimeter
+We have a candidate layout for JEDI polarimeter.
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Crystals have been ordered for hardware tests.
+Crystals and electronics have been ordered for hardware tests.
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 Will explore gain from tracking capabilities.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Work on mechanical setup in progress.
+\begin_inset VSpace 5mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 New student will begin work on target end of year.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+By the end of 2015, first prototype test is expected ...
 \end_layout
 
 \end_deeper
