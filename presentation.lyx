@@ -7,10 +7,10 @@
 \usetheme{rwth}
 \usepackage{braket}
 
-\title{Polarimetry concepts for the EDM precursor experiment at COSY}
+\title{A Polarimetry concept for the EDM experiment at COSY}
 \subtitle{\vspace{2cm} \hspace{15cm} \includegraphics{gfx/jedi_logo2.png} \vspace{-2cm}}
 \author{Paul Maanen}
-\institute{Physics Institute III B, RWTH Aachen University}
+\institute{JEDI Collaboration | Physics Institute III B, RWTH Aachen University}
 \date[\today]{DPG Frühjahrstagung \today}
 
 % Some changes on the layout, can be switched off by commenting out
@@ -182,7 +182,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-Motivation
+Introduction
 \end_layout
 
 \begin_layout Frame
@@ -200,9 +200,28 @@ Design goals for an EDM polarimeter
 
 \begin_deeper
 \begin_layout Itemize
+EDM search in storage rings: Let Electric Dipole Moment (EDM) interact with
+ fields, wait for polarization change.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Current candidate method for EDM search implicates a linear buildup of polarizat
 ion with time at 
-\begin_inset Formula $\mathcal{O}(10^{-9}/s)$
+\begin_inset Formula $\Delta P=\mathcal{O}(10^{-6}/1000s)$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bild
+\end_layout
+
 \end_inset
 
 
@@ -218,15 +237,7 @@ Design goals for polarimeter:
 
 \begin_deeper
 \begin_layout Itemize
-High 
-\begin_inset Formula $\sigma_{el}$
-\end_inset
-
-,
-\begin_inset Formula $A_{y}$
-\end_inset
-
-
+Large FoM
 \begin_inset VSpace 5mm
 \end_inset
 
@@ -242,11 +253,15 @@ Minimal influence on beam
 \end_layout
 
 \begin_layout Itemize
-Low sensitivity to systematic effects
+High sensitivity to systematic effects
 \begin_inset VSpace 5mm
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Good long term stability and reproducibility
 \end_layout
 
 \end_deeper
@@ -259,6 +274,72 @@ Low sensitivity to systematic effects
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Nuclear scattering polarimetry
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nuclear scattering cross section for scattering of polarized particles:
+ 
+\begin_inset Formula $\sigma(\theta,\phi)=\sigma_{0}(\theta)\cdot\big(1+P_{y}A_{y}(\theta)\cdot cos(\phi)\big)$
+\end_inset
+
+
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Measure left-right asymmetries in cross section: 
+\begin_inset Formula $P_{y}=\frac{1}{A_{y}}\frac{L-R}{L+R}$
+\end_inset
+
+
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+May need to also include up, down to account for tensor polarization.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Currently using dC scattering at 
+\begin_inset Formula $270\,\mbox{MeV}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gfx/left-right.eps
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Detector concept
 \end_layout
@@ -284,8 +365,8 @@ Target choice
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename gfx/FOM_270_200_49_MeV.pdf
-	height 80theight%
+	filename gfx/FOM_270_200_MeV.pdf
+	height 75theight%
 
 \end_inset
 
@@ -293,11 +374,15 @@ Target choice
 \end_layout
 
 \begin_layout Itemize
-Carbon was chosen as best overall target choice
+Carbon was chosen as working choice.
 \end_layout
 
 \begin_layout Itemize
-Big cross section and analysing power, easy to handle
+Large analysing power, high elastic cross section
+\end_layout
+
+\begin_layout Itemize
+Most other target also favor forward region.
 \end_layout
 
 \end_deeper
@@ -394,7 +479,7 @@ Readout Concept
 \begin_layout Standard
 \begin_inset Graphics
 	filename gfx/DAQ.pdf
-	lyxscale 20
+	lyxscale 60
 	height 80theight%
 
 \end_inset
@@ -403,7 +488,8 @@ Readout Concept
 \end_layout
 
 \begin_layout Itemize
-Triggerless readout: Use waveform digitizers and read out every turn.
+Triggerless readout: Use waveform digitizers and read out every on every
+ crossing of beam and target.
 \begin_inset Note Note
 status collapsed
 
@@ -425,7 +511,7 @@ SIS Waveform Digitizer zeigen.
 \end_layout
 
 \begin_layout Itemize
-Use FPGA-based online analysis
+Use FPGA-based online analysis; could provide data for feedback system.
 \end_layout
 
 \end_deeper
@@ -434,7 +520,7 @@ Use FPGA-based online analysis
 \end_layout
 
 \begin_layout Section
-Detector
+Simulation studies
 \end_layout
 
 \begin_layout Frame
@@ -471,6 +557,149 @@ Candidate Layout
 status open
 
 \begin_layout Plain Layout
+Simulation studies (cont'd)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/dC_elastic_EvsTheta.pdf
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Elastically scattered deuterons retain almost complete beam energy.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simulation studies (cont'd)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/Inelastic.pdf
+	height 60theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Break-up has almost no analyzing power, so discard it.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Protons and neutrons from break-up are energetically well separated.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Complete stop of particles provides good signal separation.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Inelastic reactions carry some analysing power, so maybe keep these.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Simulation studies (cont'd)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename gfx/Stop_depth_in_LYSO.pdf
+	width 45text%
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename gfx/Stop_in_LYSO.pdf
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Simulation studies
 \end_layout
 
@@ -488,94 +717,6 @@ Simulation studies
 \begin_inset Graphics
 	filename gfx/Simulation.pdf
 	height 100theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Simulation studies (cont'd)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename gfx/ranges.eps
-	width 40text%
-	height 80theight%
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 1cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename gfx/Stop_in_LYSO.pdf
-	width 40text%
-	height 80theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Simulation studies (cont'd)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename gfx/dC_elastic_EvsTheta.pdf
-	width 40page%
-	height 80theight%
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 1cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename gfx/Inelastic.pdf
-	width 40page%
-	height 80theight%
 
 \end_inset
 
@@ -634,17 +775,57 @@ Work on mechanical setup in progress.
 \end_layout
 
 \begin_layout Itemize
-New student will begin work on target end of year.
-\begin_inset VSpace 5mm
+By the end of 2015, first prototype test is expected ...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Final frame, subtext is optional 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Note: should be plain 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{final page}[rwth][Any questions?]{Thank you for your attention
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[plain] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usebeamertemplate{final page}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-By the end of 2015, first prototype test is expected ...
-\end_layout
-
-\end_deeper
 \end_body
 \end_document
