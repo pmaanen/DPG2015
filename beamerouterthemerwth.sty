@@ -11,6 +11,10 @@
 % \foottextwidth is width of footer text
 \newlength{\foottextwidth}
 \setlength{\foottextwidth}{\paperwidth-31.2mm-98.9mm-4.5mm}
+% \headwidth is the width of the text in headline without the space for 2nd logo
+% here the width is for a logo format of 2:1, the height should be 13mm, therefore the logobox is 26mm
+\newlength{\headwidth}
+\setlength{\headwidth}{\paperwidth-24mm-26mm} 
 
 % Maxbox: Ensure #3 is no wider than #1 and taller than #2
 \providecommand{\maxbox}[3]{%
@@ -51,7 +55,6 @@
 \newcommand{\footlinedatepage}{footlinedatepage}	% Date	 \\ p
 \newcommand{\footlinestyle}{footlinerwthexample}
 \newcommand{\setfootlinestyle}[1]{\renewcommand{\footlinestyle}{#1}} % for available styles see commands above 
-
 
 
 % CHANGE: Own footer style with just title and author in footer
@@ -105,14 +108,28 @@
 %%%
 \defbeamertemplate*{headline}{rwth}{
 \ifx \headlinestyle \headlinerwthexample
-	\vspace{5.7mm}
 	\hbox{%
+		\vspace{5.7mm}
 		\hspace*{8mm}%
-		\begin{beamercolorbox}[wd=\framelinewidth,ht=13mm]{section in head/foot}%
-		\usebeamerfont{section in head/foot}\insertsectionhead\strut%
-		\nempty{\insertsubsectionhead}{\newline\usebeamerfont{subsection in head/foot}\insertsubsectionhead\strut}{}%
-		\end{beamercolorbox}%
+		\parbox[b]{\headwidth}{
+		%split the headline in two parboxes, first one for the headline
+			\begin{beamercolorbox}[wd=\headwidth,ht=13mm]{section in head/foot}%
+			\usebeamerfont{section in head/foot}\insertsectionhead\strut%
+			\nempty{\insertsubsectionhead}{\newline\usebeamerfont{subsection in head/foot}\insertsubsectionhead\strut}{}%
+			\end{beamercolorbox}%
+		}
 		\hspace*{8mm}%
+		%second one for the experiment, box empty if no experiment logo is used
+		\parbox[b]{13mm}{    
+			\ifexperimentlogo    
+				\hfill{}%
+				\vbox to13mm{%
+					\hfill\maxbox{26mm}{13mm}{\pgfuseimage{experimentLogo}}%
+					\vfil{}
+				}%
+			\else
+			\fi
+   		}
 	}%
 	\vspace{1.9mm}
 	\hspace*{8mm}\begin{beamercolorbox}[wd=\framelinewidth,colsep=0.25pt]{separation line}
@@ -124,10 +141,24 @@
 	\vspace{5.7mm}
 	\hbox{%
 		\hspace*{8mm}%
-		\begin{beamercolorbox}[wd=\framelinewidth,ht=13mm]{section in head/foot}%
-		\usebeamerfont{frametitle}\insertframetitle%
-		\end{beamercolorbox}%
+		%split the headline in two parboxes, first one for the headline
+		\parbox[b]{\headwidth}{
+			\begin{beamercolorbox}[wd=\headwidth,ht=13mm]{section in head/foot}%
+			\usebeamerfont{frametitle}\insertframetitle%
+			\end{beamercolorbox}%
+		}
 		\hspace*{8mm}%
+		%second one for the experiment, box just exist if a experiment logo is used		
+		\parbox[b]{13mm}{    
+			\ifexperimentlogo   
+			\hfill{}%
+				\vbox to13mm{%	
+					\hfill\maxbox{26mm}{13mm}{\pgfuseimage{experimentLogo} }%
+					\vfil{}
+				}%
+			\else
+			\fi
+   		}
 	}%
 	\vspace{1.9mm}
 	\hspace*{8mm}\begin{beamercolorbox}[wd=\framelinewidth,colsep=0.25pt]{separation line}

@@ -1054,39 +1054,16 @@ Lyso scintillators
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-\begin_inset Graphics
-	filename deuteron-lyso-270-range.pdf
-	lyxscale 50
-	width 45text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename deuteron-lyso-270-x.pdf
-	lyxscale 50
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
-Chosen detector size of 
-\begin_inset Formula $3\times3\times10\,$
-\end_inset
-
-
-\begin_inset Formula $\mathrm{cm}^{3}$
-\end_inset
-
-as starting value
+LYSO erklären, range plot, evtl bild von prototypen
 \end_layout
 
 \end_deeper
 \begin_layout Separator
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -1161,59 +1138,11 @@ Plastic scintillators
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-\begin_inset Graphics
-	filename ekinvsz.pdf
-	lyxscale 50
-	width 45text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename deuteron-plastic-100-range.pdf
-	lyxscale 50
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
 Use degrader to suppress photon background and reduce length of plastic
  detector.
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $T_{d}=270\,\mathrm{MeV}$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Absorber thickness 
-\begin_inset Formula $\approx40\,\mbox{mm}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Scintillator thickness 
-\begin_inset Formula $\approx50\,$
-\end_inset
-
-
-\begin_inset Formula $mm$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Separator
 
@@ -1331,7 +1260,7 @@ Assuming AP of breakup is zero,
 \begin_inset Formula $\mathcal{FOM}\propto\epsilon_{el}\left(\frac{\epsilon_{el}}{\epsilon_{el}+\epsilon_{p}}\right)^{2}$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
