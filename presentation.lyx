@@ -7,11 +7,19 @@
 \usetheme{rwth}
 \usepackage{braket}
 
+<<<<<<< HEAD
 \title{Monte Carlo simulations for the JEDI polarimeter at COSY}
 \subtitle{\vspace{2cm} \hspace{15cm} \includegraphics{gfx/jedi_logo2.png} \vspace{-2cm}}
 \author{Paul Maanen on behalf of the JEDI Collaboration}
 \institute{JEDI Collaboration | Physics Institute III B, RWTH Aachen University}
 \date[\today]{DPG Frühjahrstagung 2016}
+=======
+\title{Polarimetry concepts for the EDM precursor experiment at COSY}
+\subtitle{\vspace{2cm} \hspace{15cm} \includegraphics{gfx/jedi_logo2.png} \vspace{-2cm}}
+\author{Paul Maanen}
+\institute{Physics Institute III B, RWTH Aachen University}
+\date[\today]{DPG Frühjahrstagung \today}
+>>>>>>> parent of 81cfc72... Final Version
 
 % Some changes on the layout, can be switched off by commenting out
 \setheadlinestyle{headlineframetitle}
@@ -187,7 +195,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-Introduction
+Motivation
 \end_layout
 
 \begin_layout Frame
@@ -340,6 +348,7 @@ Design goals for an EDM polarimeter
 
 \begin_deeper
 \begin_layout Itemize
+<<<<<<< HEAD
 EDM search in storage rings: Let EDM interact with fields, wait for polarization
  change.
 \begin_inset VSpace 5mm
@@ -362,6 +371,11 @@ status collapsed
 Bild
 \end_layout
 
+=======
+Current candidate method for EDM search implicates a linear buildup of polarizat
+ion with time at 
+\begin_inset Formula $\mathcal{O}(10^{-9}/s)$
+>>>>>>> parent of 81cfc72... Final Version
 \end_inset
 
 
@@ -377,7 +391,15 @@ Design goals for polarimeter:
 
 \begin_deeper
 \begin_layout Itemize
-Large FoM
+High 
+\begin_inset Formula $\sigma_{el}$
+\end_inset
+
+,
+\begin_inset Formula $A_{y}$
+\end_inset
+
+
 \begin_inset VSpace 5mm
 \end_inset
 
@@ -393,89 +415,28 @@ Minimal influence on beam
 \end_layout
 
 \begin_layout Itemize
-High sensitivity to systematic effects
+Low sensitivity to systematic effects
 \begin_inset VSpace 5mm
 \end_inset
 
 
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout Itemize
-Good long term stability and reproducibility
-\end_layout
-
+Currently using elastic deuteron-carbon scattering.
+=======
 \end_deeper
 \end_deeper
 \begin_layout Frame
 
+>>>>>>> parent of 81cfc72... Final Version
 \end_layout
 
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Nuclear scattering polarimetry
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Nuclear scattering cross section for scattering of polarized particles:
- 
-\begin_inset Formula $\sigma(\theta,\phi)=\sigma_{0}(\theta)\cdot\big(1+P_{y}A_{y}(\theta)\cdot cos(\phi)\big)$
-\end_inset
-
-
-\begin_inset VSpace 5mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Measure left-right asymmetries in cross section: 
-\begin_inset Formula $P_{y}=\frac{1}{A_{y}}\frac{L-R}{L+R}$
-\end_inset
-
-
-\begin_inset VSpace 5mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-May need to also include up, down to account for tensor polarization.
-\begin_inset VSpace 5mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Currently using elastic deuteron-carbon scattering.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename gfx/left-right.eps
-	height 50theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Section
 Detector concept
 \end_layout
@@ -501,8 +462,8 @@ Target choice
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename gfx/FOM_270_200_MeV.pdf
-	height 75theight%
+	filename gfx/FOM_270_200_49_MeV.pdf
+	height 80theight%
 
 \end_inset
 
@@ -510,6 +471,7 @@ Target choice
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 Carbon was chosen as working choice
 \end_layout
 
@@ -519,6 +481,13 @@ Large analysing power, high elastic cross section
 
 \begin_layout Itemize
 FOM for Protons also concentrated in the forward region
+=======
+Carbon was chosen as best overall target choice
+\end_layout
+
+\begin_layout Itemize
+Big cross section and analysing power, easy to handle
+>>>>>>> parent of 81cfc72... Final Version
 \end_layout
 
 \end_deeper
@@ -650,20 +619,33 @@ Candidate Material: LYSO/Plastic Scintillator
 
 \begin_layout Plain Layout
 \begin_inset Graphics
+<<<<<<< HEAD
 	filename LYSO-example.pdf
 	width 30text%
+=======
+	filename gfx/DAQ.pdf
+	lyxscale 20
+	height 80theight%
+>>>>>>> parent of 81cfc72... Final Version
 
 \end_inset
 
 
 \end_layout
 
+<<<<<<< HEAD
 \end_inset
 </cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
+=======
+\begin_layout Itemize
+Triggerless readout: Use waveform digitizers and read out every turn.
+\begin_inset Note Note
+status collapsed
+>>>>>>> parent of 81cfc72... Final Version
 
 \begin_layout Plain Layout
 \begin_inset VSpace 15mm
@@ -734,6 +716,7 @@ LYSO
 Plastic
 \end_layout
 
+<<<<<<< HEAD
 \end_inset
 </cell>
 </row>
@@ -743,6 +726,10 @@ Plastic
 
 \begin_layout Plain Layout
 Density [g/cm3] 
+=======
+\begin_layout Itemize
+Use FPGA-based online analysis
+>>>>>>> parent of 81cfc72... Final Version
 \end_layout
 
 \end_inset
@@ -754,6 +741,7 @@ Density [g/cm3]
 7.3
 \end_layout
 
+<<<<<<< HEAD
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
@@ -761,6 +749,10 @@ Density [g/cm3]
 
 \begin_layout Plain Layout
 1.05
+=======
+\begin_layout Section
+Detector
+>>>>>>> parent of 81cfc72... Final Version
 \end_layout
 
 \end_inset
@@ -995,7 +987,11 @@ No
 status open
 
 \begin_layout Plain Layout
+<<<<<<< HEAD
 Simulation setup
+=======
+Simulation studies
+>>>>>>> parent of 81cfc72... Final Version
 \end_layout
 
 \end_inset
@@ -1006,15 +1002,21 @@ Simulation setup
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
+<<<<<<< HEAD
 	filename detector.svg
 	lyxscale 50
 	height 80theight%
+=======
+	filename gfx/Simulation.pdf
+	height 100theight%
+>>>>>>> parent of 81cfc72... Final Version
 
 \end_inset
 
 
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout Itemize
 Generated 10k events of elastic and breakup each at 
 \begin_inset Formula $T_{d}=270\,\mathrm{MeV}$
@@ -1035,6 +1037,8 @@ Detector acceptance:
 
 \end_layout
 
+=======
+>>>>>>> parent of 81cfc72... Final Version
 \end_deeper
 \begin_layout Separator
 
@@ -1056,6 +1060,7 @@ Lyso scintillators
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
+<<<<<<< HEAD
 	filename deuteron-lyso-270-range.pdf
 	lyxscale 50
 	width 45text%
@@ -1067,10 +1072,16 @@ Lyso scintillators
 	filename deuteron-lyso-270-x.pdf
 	lyxscale 50
 	width 45text%
+=======
+	filename gfx/ranges.eps
+	width 40text%
+	height 80theight%
+>>>>>>> parent of 81cfc72... Final Version
 
 \end_inset
 
 
+<<<<<<< HEAD
 \end_layout
 
 \begin_layout Itemize
@@ -1129,11 +1140,24 @@ Efficiency is lost because of breakup in detector
 
 \begin_layout Standard
 \begin_inset VSpace 5mm
+=======
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename gfx/Stop_in_LYSO.pdf
+	width 40text%
+	height 80theight%
+
+>>>>>>> parent of 81cfc72... Final Version
 \end_inset
 
 
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout Itemize
 No strong dependence on energy resolution
 \end_layout
@@ -1143,6 +1167,9 @@ No strong dependence on energy resolution
 
 \end_layout
 
+=======
+\end_deeper
+>>>>>>> parent of 81cfc72... Final Version
 \begin_layout Separator
 
 \end_layout
@@ -1163,9 +1190,15 @@ Plastic scintillators
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
+<<<<<<< HEAD
 	filename ekinvsz.pdf
 	lyxscale 50
 	width 45text%
+=======
+	filename gfx/dC_elastic_EvsTheta.pdf
+	width 40page%
+	height 80theight%
+>>>>>>> parent of 81cfc72... Final Version
 
 \end_inset
 
@@ -1178,6 +1211,7 @@ Plastic scintillators
 \end_inset
 
 
+<<<<<<< HEAD
 \end_layout
 
 \begin_layout Itemize
@@ -1250,6 +1284,12 @@ Detection efficiencies (plastic)
 	filename plastic-breakup.pdf
 	lyxscale 75
 	width 50text%
+=======
+\begin_inset Graphics
+	filename gfx/Inelastic.pdf
+	width 40page%
+	height 80theight%
+>>>>>>> parent of 81cfc72... Final Version
 
 \end_inset
 
@@ -1353,6 +1393,7 @@ LYSO and plastic scintillators provide comparable performance
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 Again no strong dependence on energy resolution
 \end_layout
 
@@ -1421,6 +1462,19 @@ Will include
 Will look include inelastic scattering in simulation
 \end_layout
 
+=======
+New student will begin work on target end of year.
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+By the end of 2015, first prototype test is expected ...
+\end_layout
+
+>>>>>>> parent of 81cfc72... Final Version
 \end_deeper
 \end_body
 \end_document
